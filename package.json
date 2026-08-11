@@ -24,7 +24,7 @@
   "author": "yhk1038",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yhk1038/claude-code-battery.git"
+    "url": "git+https://github.com/Swttch/claude-code-battery.git"
   },
   "files": [
     "dist"
