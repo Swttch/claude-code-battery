@@ -1,22 +1,26 @@
 {
   "name": "claude-code-battery",
-  "version": "0.2.0",
-  "description": "SDK and CLI for Claude Code internal API",
+  "version": "0.3.0",
+  "description": "Moved to @swttch/extend-kit. This package now re-exports it and is no longer maintained separately.",
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "bin": {
-    "ccb": "dist/cli/index.js"
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
   },
-  "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
-    "lint": "tsc --noEmit",
-    "test": "node --test dist/**/*.test.js"
+  "bin": {
+    "ccb": "cli.js"
+  },
+  "dependencies": {
+    "@swttch/extend-kit": "^0.3.0"
   },
   "keywords": [
     "claude",
     "claude-code",
+    "deprecated",
     "sdk",
     "cli"
   ],
@@ -27,13 +31,11 @@
     "url": "git+https://github.com/Swttch/claude-code-battery.git"
   },
   "files": [
-    "dist"
+    "index.js",
+    "index.d.ts",
+    "cli.js"
   ],
   "engines": {
     "node": ">=20"
-  },
-  "devDependencies": {
-    "@types/node": "^25.5.0",
-    "typescript": "^6.0.2"
   }
 }
